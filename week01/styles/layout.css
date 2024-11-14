@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    border-radius: 0;
+    border-radius: 0 !important;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main (auto-expanded), Footer */
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif; /* Font family */
+    background-color: #e9ecef; /* Light background color */
+}
+
+
+/* Header */
+header {
+    justify-content: space-between;
+    color: lightgray;
+    background-color: #333333; /* Blue background for header */
+    border-radius: 0;
+    border-radius: 0 !important;
+     /* padding: 1em;   */
+}
+
+header h2 {
+    height: 3rem;
+    margin: 2rem;
+    color:white;
+}
+
+/* Navigation - Flexbox */
+nav ul {
+    height: 3rem;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: white;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem; /* Padding for clickable area */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3:1 ratio for main and aside */
+    gap: 0px;
+    /* padding: 20px; */
+}
+
+
+main {
+     background-color: #cccccc; 
+    /* padding: 20px;
+    border: 1px solid #ddd; */
+}
+
+main h2 {
+    margin-top: 2rem; 
+    margin-left: 2rem; 
+}
+
+aside {
+    background-color: white;
+}
+
+aside h2 {
+    margin-top: 2rem; 
+    margin-left: 2rem; 
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Blue background for footer */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    padding: 1.5em;
+    font-size: 0.9em; /* Slightly smaller font size */
+} 
+
