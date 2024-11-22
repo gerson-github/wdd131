@@ -1,0 +1,32 @@
+@media screen and (min-width: 500px) {
+
+  /* Header  larger screens */
+  header {
+    background-color: #000; 
+    color: #fff; 
+  }
+
+  /* Layout */
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem; 
+  }
+
+  /* Section styling: Light grey background for sections for larger screens */
+  section {
+    padding: 2rem; 
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+  }
+
+  /* text size */
+  header h1 {
+    font-size: 2rem; 
+  }
+
+  /* larger footer text */
+  footer p {
+    font-size: 1rem; 
+  }
+}
