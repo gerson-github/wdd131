@@ -1,0 +1,191 @@
+body 
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 18rem;
+    margin-right: 18rem;
+}
+header,
+ footer {
+    background-color:#174d6f;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family: "Montserrat Alternates", sans-serif; 
+}
+.name {
+    color: yellow;
+    font-size: 80%;
+}
+nav {
+    background-color: #333; /* Background color for the navigation bar */
+    color: whitesmoke;
+    padding: 0;
+}
+
+nav ul {
+    display: grid;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 28px;
+    height: 60px;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex; /* Align content inside the li */
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: whitesmoke; /* Default link color */
+    position: relative; /* Required for ::after positioning */
+    padding: 10px 15px; /* Add spacing for clickable area */
+    transition: color 0.3s ease; /* Smooth text color change */
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Start underline hidden */
+    height: 2px;
+    background-color: whitesmoke; /* Underline color */
+    transition: width 0.3s ease; /* Smooth animation for underline */
+    margin: 9px;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    color: whitesmoke; /* Change text color on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+
+/* Parent container to hold main and aside */
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1.40fr; /* Main takes 3 parts, aside takes 1 part */
+    gap: 1rem; /* Space between columns */
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+/* Main section styles */
+main {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 0;
+    background-color: white; /* Optional: Add a background for clarity */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+
+}
+
+main h2 {
+    background-color: #174d6f; /* Blue background */
+    color: whitesmoke; /* White text */
+    margin: -1rem -1rem 1rem -1rem; /* Remove padding effect for full width */
+    padding: 1rem; /* Add space inside */
+    border-top-left-radius: 10px; /* Rounded corners to match main */
+    border-top-right-radius: 10px;
+    text-align: center;
+    
+}
+
+/* Aside section styles */
+aside {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 0;
+    background-color: white; /* Optional: Add a background for clarity */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+aside h2 {
+    background-color: #174d6f; /* Blue background */
+    color: white; /* White text */
+    margin: -1rem -1rem 1rem -1rem; /* Remove padding effect for full width */
+    padding: 1rem; /* Add space inside */
+    border-top-left-radius: 10px; /* Rounded corners to match aside */
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+
+aside ul {
+    margin: 8rem auto auto auto;
+    display: flex; /*  flexbox for alignment */
+    flex-direction: column; /* Stack list vertically */
+    flex-grow: 1; /* Make the ul take available space to center itself */
+    font-size: 24px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+ }
+
+.card img, .card .flag {
+    height: 160px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.card .flag p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+     margin: 2px;  
+}
+
+.card:nth-child(even) img, .card:nth-child(even) .flag {
+    margin-left: 0;
+    margin-right: 0;
+}
+.card-content {
+    flex: 1;
+}
+.card-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+.card-content p {
+    margin: 1rem;
+    color: #555;
+}
+
+footer {
+    font-size: 26px;
+}
+
+footer p {
+    padding: 0;
+}
+
+.icone {
+    width: 28px;
+    height: 18px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+}
+
+
