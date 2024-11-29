@@ -57,29 +57,5 @@
         gap: 10px;
         overflow: hidden;
     }
-
-    .navigation {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 200px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
-        border-radius: 0 0 5px 5px;
-        padding: 1rem 0;
-    }
-
-    .navigation.show {
-        display: flex;
-    }
-
-    .navigation li {
-        margin: 0;
-    }
-
-    .navigation a {
-        padding: .5rem 1rem;
-        text-align: left;
-    }
+    
 }

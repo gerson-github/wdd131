@@ -71,7 +71,7 @@ footer,
 
 .navigation a {
     display: block;
-    padding: 1;
+    padding: 1px;
     margin: 10px;
     justify-items: center;
     text-align: center;
@@ -140,9 +140,9 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px; /* Set the width of the grid item */
-    margin-left: auto;  /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
+    width: 400px; 
+    margin-left: auto;  
+    margin-right: auto; 
 }
 
 .grid-container {
