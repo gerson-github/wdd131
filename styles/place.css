@@ -1,0 +1,115 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0 280px; 
+}
+
+/* Main Content Styles */
+main {
+    background-image: url('../images/madagascar-wider.webp');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center -150px;
+    height: 80vh; 
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1px; 
+    padding: 10px;
+    background-color: rgba(242, 240, 236, 0.766); 
+}
+
+/* Grid Header */
+.grid-header {
+    display: flex;
+    align-items: center; /* Aligns text and icon vertically */
+    grid-column: span 2; 
+    background-color: #017747;
+    color: #fffafe; 
+    font-size: 1.7em;
+    margin: 15px 0; 
+    padding: 18px; 
+    width: 90%; 
+    transform: translateX(-20px); /* Corrected: Capitalize 'X' */    
+}
+
+.grid-header img {
+    margin-left: 10px; /* Adds spacing between text and icon */
+}
+
+/* Grid Items */
+.item-1 {
+    align-self: start;
+    justify-self: start;
+    padding: 40px 0 0 20px; 
+}
+
+.item-2 {
+    justify-self: end;
+    transform: translateY(-80px); /* Move upward */
+    padding: 0 20px; 
+}
+
+/* Shared Label and Value Styles */
+.label, .value {
+    padding: 5px;
+}
+
+.label {
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+}
+
+.value {
+    text-align: left;
+    color: #555;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #d21033;
+    color: #fffafe; /* Light text color */
+    text-align: center;
+    padding: 20px 0; /* Vertical spacing */
+}
+
+/* Header Specific Styles */
+header {
+    border-bottom: 15px solid #017747; /* Green bottom border */
+}
+
+header h1 {
+    font-size: 2.5em; /* Large font size */
+}
+
+/* Footer Specific Styles */
+footer {
+    font-size: 16px;
+    transform: translateY(-105px); /* Move upward */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}
+
+/* Icon Styles */
+.icone {
+    width: 28px;
+    height: 18px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
