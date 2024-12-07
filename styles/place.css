@@ -1,33 +1,108 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Define global CSS variables */
+:root {
+    /* Colors */
+    --primary-color: #017747;
+    --secondary-color: #d21033;
+    --background-color: rgba(242, 240, 236, 0.766);
+    --text-light: #fffafe;
+    --text-dark: #333;
+    --text-muted: #555;
+
+    /* Font Sizes */
+    --font-size-large: 2.5em;
+    --font-size-medium: 1.7em;
+    --font-size-small: 16px;
+
+    /* Spacing */
+    --padding-default: 10px;
+    --padding-header: 18px;
+    --margin-header: 15px;
+    --margin-body: 0 280px;
+    --grid-gap: 1px;
+
+    /* Miscellaneous */
+    --background-image: url('../images/madagascar-wider.webp');
+}
+
 /* Body Styles */
 body {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-    margin: 0 280px; 
+    margin: var(--margin-body);
 }
 
 /* Main Content Styles */
 main {
-    background-image: url('../images/madagascar-wider.webp');
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center -150px;
-    height: 80vh; 
+    height: 70vh; 
+    position: relative;
+    overflow: hidden;
 }
+
+picture {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;  
+    transform: translateY(-9%);   /* -80px */
+}
+
+picture img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+   
+}
+
+
+.content {
+  /* transform: translatey(-35vw);    */
+
+  position: absolute; /* Allows precise placement over the image */
+    top: 0;             /* Aligns to the top of the picture */
+    left: 0;            /* Aligns to the left of the picture */
+    width: 100%;        /* Full width to match the picture */
+    height: 100%;       /* Full height to match the picture */
+    z-index: 10;        /* Ensures it's above the image */
+    color: white;       /* Ensures text is readable on the image */
+    display: flex;      /* Enables centering of content */
+    flex-direction: column;
+    padding: 1rem;      /* Adds some padding around the content */
+    margin: 0;
+    padding: 0;
+
+}
+
 
 /* Grid Container */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 1px; 
-    padding: 10px;
-    background-color: rgba(242, 240, 236, 0.766); 
+    grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gap);
+    padding: var(--padding-default);
+    background-color: var(--background-color);
+
+}
+
+/* Grid Items */
+.data-section {
+    align-self: start  ;
+    justify-self: start ;
+    padding: 4% 0 0 2%;  
+    
+
+}
+
+.weather-section {
+    align-self: end  ;
+    justify-self: end ;
+   transform: translateY(-35%);  
+    margin: 2%;
 }
 
 /* Grid Header */
@@ -35,30 +110,17 @@ main {
     display: flex;
     align-items: center; /* Aligns text and icon vertically */
     grid-column: span 2; 
-    background-color: #017747;
-    color: #fffafe; 
-    font-size: 1.7em;
-    margin: 15px 0; 
-    padding: 18px; 
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-size: var(--font-size-medium);
+    margin: var(--margin-header) 0;
+    padding: var(--padding-header);
     width: 90%; 
     transform: translateX(-20px); /* Corrected: Capitalize 'X' */    
 }
 
 .grid-header img {
     margin-left: 10px; /* Adds spacing between text and icon */
-}
-
-/* Grid Items */
-.item-1 {
-    align-self: start;
-    justify-self: start;
-    padding: 40px 0 0 20px; 
-}
-
-.item-2 {
-    justify-self: end;
-    transform: translateY(-80px); /* Move upward */
-    padding: 0 20px; 
 }
 
 /* Shared Label and Value Styles */
@@ -68,36 +130,36 @@ main {
 
 .label {
     font-weight: bold;
-    color: #333;
+    color: var(--text-dark);
     text-align: right;
 }
 
 .value {
     text-align: left;
-    color: #555;
+    color: var(--text-muted);
 }
 
 /* Header and Footer */
 header, footer {
-    background-color: #d21033;
-    color: #fffafe; /* Light text color */
+    background-color: var(--secondary-color);
+    color: var(--text-light); /* Light text color */
     text-align: center;
     padding: 20px 0; /* Vertical spacing */
 }
 
 /* Header Specific Styles */
 header {
-    border-bottom: 15px solid #017747; /* Green bottom border */
+    border-bottom: 15px solid var(--primary-color); /* Green bottom border */
 }
 
 header h1 {
-    font-size: 2.5em; /* Large font size */
+    font-size: var(--font-size-large); /* Large font size */
 }
 
 /* Footer Specific Styles */
 footer {
-    font-size: 16px;
-    transform: translateY(-105px); /* Move upward */
+    font-size: var(--font-size-small);
+    /*transform: translateY(-105px);  Move upward */
 }
 
 footer p {
@@ -112,4 +174,121 @@ footer p {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
+}
+
+
+@media (min-width: 1190px) {
+
+    .content1,
+    .content2,
+    .content3 {
+        display: none;
+    }
+
+}
+
+
+/* Media Query for max-width 1190px */
+@media (max-width: 1190px) {
+  
+    main {
+        display: grid;
+        grid-template-rows: auto auto ; /* Create two rows */
+        gap: 0; /* Add spacing between rows */
+        height: 120vh; /* Full viewport height */
+        width: 100%;
+        padding: 0;
+        background-color: whitesmoke; /* Optional background color */
+        position: unset;
+        overflow: unset;
+        
+
+    }
+
+    picture {
+        height: 70%;
+        width: 100%;
+        transform: translateY(0%);
+   }
+   
+    picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;  
+    }
+
+    .content {
+      
+        position:initial;
+          top: unset;             /* Aligns to the top of the picture */
+          left: unset;            /* Aligns to the left of the picture */
+          width: unset;        /* Full width to match the picture */
+          height: unset;       /* Full height to match the picture */
+          z-index: unset;        /* Ensures it's above the image */
+          color: unset;       /* Ensures text is readable on the image */
+          display: unset;      /* Enables centering of content */
+          flex-direction: unset;
+          padding: unset;      /* Adds some padding around the content */
+          margin: unset;
+          padding: unset;
+      
+           transform: translateY(-155px);  
+
+      }
+
+      .data-section, .weather-section
+      {
+        align-self: center  ;
+        justify-self: center ;
+        padding: unset;
+        width: 100%;  
+        background-color: whitesmoke;
+      }
+    
+    .weather-section {
+       transform: unset;  
+
+    }
+
+    .grid-container {
+        background-color: unset;
+    }
+
+    /* Grid Header */
+    .grid-header {
+        display: unset;
+        align-items: center; /* Aligns text and icon vertically */
+        grid-column: span 2; 
+        background-color: unset;
+        color: var(--text-dark);
+        
+        text-align: center ;
+        
+        margin: unset;
+        
+        width: 100%; 
+        transform: unset;
+    }
+
+    .grid-header img {
+        margin-left: 10px; /* Adds spacing between text and icon */
+    }
+
+
+
+
+    .data-section-mobile,
+    .weather-section-mobile,
+    .content3 {
+        background-color: #017747; /* Example color */
+        color: white; /* Text color for contrast */
+        padding: 0;
+        text-align: center;
+        border-radius: 8px; /* Rounded corners */
+    }
+
+
+
+
+ 
 }

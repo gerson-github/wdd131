@@ -16,12 +16,22 @@
     
 </head>
 <body>
-    <div class="" >
-        <header>
-            <h1>Madagascar</h1>
-        </header>
-        <main >
-            <section class="item-1">
+    <header>
+        <h1>Madagascar</h1>
+    </header>
+    <main >
+
+
+        <picture  >
+            <source srcset="images/madagascar-mobile.webp" media="(max-width: 1190px)" >
+             <source srcset="images/madagascar-wider.webp" media="(min-width: 1191px)"> 
+            <img src="images/madagascar-wider.webp" alt="Madagascar"             >
+        </picture>
+
+ 
+        
+        <div class="content">
+            <section class="data-section">
                 <div class="grid-container  ">
                     <div class="grid-header">Data</div>
                     <div class="grid-item label">Area:</div>
@@ -42,7 +52,7 @@
                     <div class="grid-item value">.mg</div>
                 </div>
             </section>
-            <section class="item-2">
+            <section class="weather-section">
                 <div class="grid-container ">
                     <div class="grid-header">Weather
                         <img src="images/weather-clouds-icon.svg" alt="Weather Icon" width="50" height="50">
@@ -54,17 +64,28 @@
                     <div class="grid-item label">Wind:</div>
                     <div class="grid-item value">5 km/h</div>
                     <div class="grid-item label">Wind Chill:</div>
-                    <div class="grid-item value">9.8&deg;C</div>
+                    <div class="grid-item value"><span id="windChill">N/A</span></div>
                 </div>
 
             </section>
-        </main>
-        <footer>
-            <div>
-                &copy; <span id="currentYear"></span>  <img class="icone" src="images/canada_flag.jfif" alt="icone of canada">  Gerson Martins de Oliveira <img class="icone" src="images/canada_flag.jfif" alt="icone of canada"> Canada
-            </div>
-            <div class="name" id="lastModified">Page last modified: </div>
-        </footer>
-    </div>
+        </div>
+
+        <!-- <div class="content1">
+            aqui
+        </div>
+        <div class="content2">
+            AQUI
+        </div>
+        <div class="content3">
+            AQUI
+        </div> -->
+    </main>
+    <footer>
+        <div>
+            &copy; <span id="currentYear"></span>  <img class="icone" src="images/canada_flag.jfif" alt="icone of canada">  Gerson Martins de Oliveira <img class="icone" src="images/canada_flag.jfif" alt="icone of canada"> Canada
+        </div>
+        <div class="name" id="lastModified">Page last modified: </div>
+    </footer>
+
 </body>
 </html>    
