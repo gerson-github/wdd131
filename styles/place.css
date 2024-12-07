@@ -44,7 +44,7 @@ main {
 picture {
     display: block;
     width: 100%;
-    height: var(--image-height-desktop);
+    height: 100vh;
     transform: translateY(-9%);  
 }
 
