@@ -25,15 +25,12 @@
     --margin-header: 15px;
     --margin-body: 0 280px;
     --grid-gap: 1px;
-
-    /* Miscellaneous */
-    --background-image: url('../images/madagascar-wider.webp');
+   
 }
 
 /* Body Styles */
 body {
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
     margin: var(--margin-body);
 }
 
@@ -45,11 +42,10 @@ main {
 }
 
 picture {
-    position: relative;
     display: block;
     width: 100%;
-    height: 100vh;  
-    transform: translateY(-9%);   /* -80px */
+    height: var(--image-height-desktop);
+    transform: translateY(-9%);  
 }
 
 picture img {
@@ -63,16 +59,16 @@ picture img {
 .content {
   /* transform: translatey(-35vw);    */
 
-  position: absolute; /* Allows precise placement over the image */
-    top: 0;             /* Aligns to the top of the picture */
-    left: 0;            /* Aligns to the left of the picture */
-    width: 100%;        /* Full width to match the picture */
-    height: 100%;       /* Full height to match the picture */
-    z-index: 10;        /* Ensures it's above the image */
-    color: white;       /* Ensures text is readable on the image */
-    display: flex;      /* Enables centering of content */
+  position: absolute; 
+    top: 0;             
+    left: 0;            
+    width: 100%;        
+    height: 100%;       
+    z-index: 10;        
+    color: var(--text-light);      
+    display: flex;      
     flex-direction: column;
-    padding: 1rem;      /* Adds some padding around the content */
+    padding: 1rem;      
     margin: 0;
     padding: 0;
 
@@ -89,14 +85,12 @@ picture img {
 
 }
 
-/* Grid Items */
 .data-section {
     align-self: start  ;
     justify-self: start ;
     padding: 4% 0 0 2%;  
-    
-
 }
+
 
 .weather-section {
     align-self: end  ;
@@ -159,7 +153,6 @@ header h1 {
 /* Footer Specific Styles */
 footer {
     font-size: var(--font-size-small);
-    /*transform: translateY(-105px);  Move upward */
 }
 
 footer p {
@@ -174,17 +167,6 @@ footer p {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
-}
-
-
-@media (min-width: 1190px) {
-
-    .content1,
-    .content2,
-    .content3 {
-        display: none;
-    }
-
 }
 
 
@@ -276,16 +258,6 @@ footer p {
 
 
 
-
-    .data-section-mobile,
-    .weather-section-mobile,
-    .content3 {
-        background-color: #017747; /* Example color */
-        color: white; /* Text color for contrast */
-        padding: 0;
-        text-align: center;
-        border-radius: 8px; /* Rounded corners */
-    }
 
 
 
