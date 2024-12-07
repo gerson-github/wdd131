@@ -169,6 +169,13 @@ footer p {
     border-radius: 50%;
 }
 
+.grid-header::after {
+    content: "Forecast Info";
+    font-size: 0.9rem;
+    color: white;
+    margin-left: 0.5rem;
+    font-style: italic;
+}
 
 /* Media Query for max-width 1190px */
 @media (max-width: 1190px) {
