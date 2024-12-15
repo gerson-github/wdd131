@@ -63,7 +63,7 @@ const temples = [
       area: 116642,
       imageUrl:"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // Add more temple objects here...
+    
   ];
 
 
@@ -71,7 +71,7 @@ const temples = [
 
   function loadTemples(temples) {
     const gridContainer = document.querySelector('.grid-container');
-    gridContainer.innerHTML = ''; // Clear existing temples before reloading
+    gridContainer.innerHTML = ''; 
     
     temples.forEach(temple => {
 
@@ -97,10 +97,7 @@ const temples = [
         img.src = temple.imageUrl;
         img.alt = `${temple.templeName}, ${temple.location}`;
 
-        // const figcaption = document.createElement('figcaption');
-        // figcaption.classList.add('subtitle');
-        // figcaption.textContent = `${temple.templeName}, ${temple.location}`;
-
+       
         figure.appendChild(img);
         // figure.appendChild(figcaption);
 
