@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Review Confirmation">
-    <title>Review Confirmation</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
+    <meta name="author" content="Gerson Martins de Oliveira">
+    <title>WDD 131 - Dynamic Web Fundamentals - Gerson M Oliveira</title>
+    <link rel="stylesheet" href="styles/form-large.css"> 
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" type="text/css">
+    <link rel="icon" href="data:,">
 </head>
 <body>
     <header>
@@ -13,17 +19,23 @@
     </header>
     <main>
         <p>Thank you for your feedback!</p>
-        <p>We have received your review.</p>
+        <p>We have received your review #</p>
+        <h1><p id="review-count">0</p></h1>
     </main>
     <footer>
-        <p>© 2024 Your Name. All Rights Reserved.</p>
+        <p>© 2024 Gerson M Oliveira. All Rights Reserved.</p>
     </footer>
     <script>
         // Increment review counter using localStorage
-        let reviews = localStorage.getItem("reviewCount") || 0;
-        reviews++;
+        let reviews = parseInt(localStorage.getItem("reviewCount")) || 0;
+        reviews=reviews+1;
         localStorage.setItem("reviewCount", reviews);
+
+        // Display the updated review count on the page
+        document.getElementById("review-count").textContent = reviews;
+
         console.log(`Total Reviews Submitted: ${reviews}`);
     </script>
+
 </body>
 </html>
