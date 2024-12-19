@@ -1,0 +1,217 @@
+
+body 
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 18rem;
+    margin-right: 18rem;
+    background-color: whitesmoke;
+    color: black;
+
+}
+
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-template-rows: auto 1fr auto; /* Auto height for header and footer, remaining space for content */
+    grid-template-areas:
+        "grid-header grid-header"
+        "column-a column-b"
+        "grid-footer grid-footer";
+    gap: 0; /* Space between grid items */
+    padding: 1rem;
+    border: 2px solid red;
+}
+
+.grid-header {
+    grid-area: grid-header; /* Header spans both columns */
+    padding: 5px;
+    text-align: start;
+}
+
+.column-a {
+    grid-area: column-a; /* Column A in the first column */
+    /* background-color: lightgreen; */
+    padding: 5px;
+    display: flex; /* Ensure the column is also a flex container */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+    
+
+}
+
+.column-b {
+    grid-area: column-b; /* Column B in the second column */
+    /* background-color: lightcoral; */
+    padding: 5px;
+    height: inherit;
+}
+
+.grid-footer {
+    grid-area: grid-footer; /* Footer spans both columns */
+    /* background-color: lightgray; */
+    padding: 5px;
+    text-align: start;
+
+    display: grid;
+    grid-template-columns: 1fr ; /* Three equal columns */
+    grid-template-rows: auto;
+    gap: 1rem;
+    align-items: start; /* Align items to the top */
+    padding: 1rem;
+}
+
+.card-review, .card-name, .post-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-review label, .card-name label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    border: 2px solid #dad8d8; /* Add a black border on hover */
+}
+
+p {
+    margin: 5px;
+}
+
+em {
+    font-size: 13px;
+    margin: 0;
+}
+
+hr {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    border: none; /* Remove default border */
+    border-top: 2px solid #dad8d8; 
+
+}
+
+span {
+    color: #631878;
+    font-size: 10px;
+}
+
+.date-of-installation {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.card-img {
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+
+}
+
+.card-img img {
+    max-width: 100%; /* Ensure the image fits within the column */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.star-rating {
+    margin: 0;
+}
+
+.star-rating label {
+    display: flex; /* Align radio button and stars inline */
+    align-items: center; /* Vertically center the radio button with stars */
+}
+
+.star-rating input[type="radio"] {
+    margin-right: 5px; /* Space between the radio button and stars */
+}
+
+
+.card-features {
+    display: flex;
+    flex-direction: column; /* Stack the checkboxes vertically */
+    gap: 5px; /* Space between each checkbox-label pair */
+    margin-top: 1rem;
+}
+
+.card-features label {
+    display: flex;
+    align-items: center; /* Align the checkbox and label text vertically */
+}
+
+.card-features input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+select, input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 0.75rem; /* Increased padding for more height */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding doesn't add extra width */
+    height: auto; /* Ensure the height adjusts based on content */
+}
+
+
+
+button {
+    padding: 0.75rem 1rem; /* Increased padding for more height */
+    font-size: 1rem;
+    background-color: #D6D6D6;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: auto; /* Allow button height to adjust based on padding */
+}
+
+button:hover, textarea:hover, input:hover, select:hover  {
+    border: 2px solid black; /* Add a black border on hover */
+}
+
+ 
+
+
+
+header,
+ footer {
+    background-color:#2d032b;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family: "Montserrat Alternates", sans-serif; 
+}
+
+header {
+    font-size: 14px;
+}
+
+footer {
+    font-size: 16px;
+}
+
+footer p {
+    padding: 0;
+}
+
+.icone {
+    width: 28px;
+    height: 18px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-right: 12px;
+
+}
+
+
+

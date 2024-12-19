@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
+    <meta name="author" content="Gerson Martins de Oliveira">
+    <title>WDD 131 - Dynamic Web Fundamentals - Gerson M Oliveira</title>
+    <!-- <link rel="stylesheet" href="styles/form-large.css"> -->
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" type="text/css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <header>
+        <h1 >Product Review</h1>
+    </header>
+    <main>
+
+        <section id="produc-rated">
+
+        </section>
+
+        <div class="card">
+            <div class="grid-header">
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div> 
+            <div class="column-a">
+                <div class="card-img">
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                </div>
+            </div>
+            <div class="column-b">
+                <p>Overall Ratting</p>
+                <div class="star-rating">
+                    <label for="star-5">
+                        <input type="radio" name="stars" id="star-5" value="5">★★★★★
+                    </label>
+                    <label for="star-4">
+                        <input type="radio" name="stars" id="star-4" value="4">★★★★
+                    </label>
+                    <label for="star-3">
+                        <input type="radio" name="stars" id="star-3" value="3">★★★
+                    </label>
+                    <label for="star-2">
+                        <input type="radio" name="stars" id="star-2" value="2">★★
+                    </label>
+                    <label for="star-1">
+                        <input type="radio" name="stars" id="star-1" value="1">★
+                    </label>
+                </div>
+                <hr>
+                <div class="date-of-installation">
+                    <label for="install-Date">Date of Installation:</label>
+                    <input type="date" id="install-Date" name="installDate">
+                </div>
+                <hr>
+                <p>Which features did you find useful in the product?</p>
+                <caption><em>(Click all that apply)</em></caption>
+                <div class="card-features">
+                    <label for="durability">
+                        <input type="checkbox" id="durability" name="durability"> Durability
+                    </label>
+                    <label for="ease-of-use">
+                        <input type="checkbox" id="ease-of-use" name="easeOfUse"> Ease of Use
+                    </label>
+                    <label for="performance">
+                        <input type="checkbox" id="performance" name="performance"> Performance
+                    </label>
+                    <label for="design">
+                        <input type="checkbox" id="design" name="design"> Design
+                    </label>
+
+                </div>
+
+            </div>
+            <div class="grid-footer">
+                <div class="card-review">
+                    <label for="review">Written Review <span>(Optional)</span></label>
+                    <textarea name="review" id="review" cols="5" rows="5"></textarea>
+                </div>
+                <div class="card-name">
+                    <label for="name">Your Name <span>(Optional)</span></label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="post-button">
+                    <button type="button">Post Review</button>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+
+
+    </main>
+    <footer>
+        <div>&copy; <span id="currentYear"></span><img class="icone" src="images/canada_flag.jfif" alt="icon of Canada">Gerson Martins de Oliveira <img class="icone" src="images/canada_flag.jfif" alt="icon of Canada">Canada </div>
+        <div class="name" id="lastModified">Page last modified:</div>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+</html>
