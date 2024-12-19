@@ -16,11 +16,13 @@
     let reviews = parseInt(localStorage.getItem("reviewCount")) || 0;
     reviews=reviews+1;
     localStorage.setItem("reviewCount", reviews);
+
+    let reviewCount = localStorage.getItem("reviewCount");
     
     // Display the updated review count on the page
-    document.getElementById("review-count").textContent = reviews;
+    document.getElementById("review-count").textContent = reviewCount;
     
-    console.log(`Total Reviews Submitted: ${reviews}`);
+    console.log(`Total Reviews Submitted: ${reviewCount}`);
 
 
 
