@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" type="text/css">
     <link rel="icon" href="data:,">
+    <script src="scripts/review.js" defer></script>
+    <!-- <script src="scripts/form.js" defer></script> -->
 </head>
 <body>
     <header>
@@ -25,17 +27,20 @@
     <footer>
         <p>© 2024 Gerson M Oliveira. All Rights Reserved.</p>
     </footer>
-    <script>
-        // Increment review counter using localStorage
-        let reviews = parseInt(localStorage.getItem("reviewCount")) || 0;
-        reviews=reviews+1;
-        localStorage.setItem("reviewCount", reviews);
-
-        // Display the updated review count on the page
-        document.getElementById("review-count").textContent = reviews;
-
-        console.log(`Total Reviews Submitted: ${reviews}`);
-    </script>
+    
 
 </body>
+
 </html>
+
+<!-- <script>
+    // Increment review counter using localStorage
+let reviews = parseInt(localStorage.getItem("reviewCount")) || 0;
+reviews=reviews+1;
+localStorage.setItem("reviewCount", reviews);
+
+// Display the updated review count on the page
+document.getElementById("review-count").textContent = reviews;
+
+console.log(`Total Reviews Submitted: ${reviews}`);
+</script> -->
