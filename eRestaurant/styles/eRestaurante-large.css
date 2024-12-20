@@ -51,7 +51,9 @@ nav{
     justify-content: center;
     gap: 55px; /* Space between buttons */
     width: 100%;
+    position: relative;
 }
+
 
 
 .menu-upload img {
@@ -69,20 +71,42 @@ nav{
     
 }
 
-   .icon-list li {
+.icon-list li {
+    position: relative;
     margin-left: 25px; 
     margin-right: 20px;
+    list-style: none;
+
 } 
+
+.icon-list li::after {
+    content: ''; /* Required to create an empty pseudo-element */
+    position: absolute;
+    bottom: 0; /* Position the line at the bottom of the list item */
+    left: 50%; /* Start the line at the center horizontally */
+    width: 0; /* Initial width is 0 */
+    height: 2px; /* Set the height of the line (adjustable) */
+    background-color: black; /* Line color */
+    transition: width 0.3s ease, left 0.3s ease; /* Transition the width and position */
+}
+
+/* On hover, grow the line from center to edges */
+.icon-list li:hover::after {
+    width: 100%; /* Expand to 100% of the width */
+    left: 0; /* Position the line to start at the left edge */
+}
+
 
 /* Buttons styling */
 .menu-upload {
     display: flex;
+    justify-content: center;
     align-items: center;
     border: none;
     background: none;
     cursor: pointer;
     font-size: 1rem;
-    width: 20%;
+    width: 28%;
 }
 
 
@@ -228,7 +252,7 @@ footer p {
 
 .date-time h2, #search h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 #search {
@@ -270,6 +294,98 @@ footer p {
 /* Optional: Add some hover effects or transitions */
 .pill:hover {
     background-color: #e0e0e0;
+}
+
+
+.announcement-bar {
+    background-color: #ffcc00; /* Yellow background for visibility */
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.announcement-bar a {
+    color: #000;
+    text-decoration: none;
+}
+.announcement-bar a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
 

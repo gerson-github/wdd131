@@ -32,21 +32,24 @@
                 </ul>
             </div>
         </div>
+
+        <!-- <button class="button-add">+Add</button> -->
+
         <div class="menu-container">
-            <button class="menu-upload">
-                <img src="images/help-img.png" width="30" alt="User Icon"> Menu Upload
+            <button class="menu-upload button-add">Menu Upload
+                <!-- <img src="images/help-img.png" width="30" alt="User Icon">  -->
             </button>
-            <button class="menu-upload">
-                <img src="images/upload-img.png" width="30" alt="User Icon"> Help
+            <button class="menu-upload button-add">Help
+                <!-- <img src="images/upload-img.png" width="30" alt="User Icon">  -->
             </button>
         </div>
         <nav class="nav-menu">
            <ul class="icon-list">
-                <li><img src="images/speaker-img.png" width="30" alt=""></li>
-                <li><img src="images/magnifier-img.png" width="30" alt=""></li>
-                <li><img src="images/bell-img.png" width="30" alt=""></li>
-                <li><img src="images/config-img.png" width="30" alt=""></li>
-                <li><img src="images/user-img.png" width="30" alt=""></li>
+                <li><img src="images/speaker-img.png" data-action="speaker"  width="30" alt=""></li>
+                <li><img src="images/magnifier-img.png" data-action="search" width="30" alt=""></li>
+                <li><img src="images/bell-img.png" data-action="notifications" width="30" alt=""></li>
+                <li><img src="images/config-img.png" data-action="settings" width="30" alt=""></li>
+                <li><img src="images/user-img.png" data-action="user" width="30" alt=""></li>
             </ul>
         </nav>
 
@@ -55,19 +58,75 @@
     <main>
         <section class="dynamic-content">
             <div class="date-time">
-                <h2>Date/time: </h2>  <span class="name" id="current-date"></span>
+                <h3>Date/time: </h3>  <span class="name" id="current-date"></span>
             </div>
-            <div id="search">
-                
+            <div id="speaker" class="announcement-bar" style="display: none;">
+                <p>🎉 Today's Special Offer: Enjoy 20% off on all pasta dishes! 🎉</p>
+                <p>New Menu Items: Check out our seasonal specials!</p>
+                <p>Holiday Hours: We will be closed on Christmas Day!</p>
+                <p> Loyalty Program Updates: free appetizer!</p>
+            </div>
+            <div id="search" style="display: none;">
                 <div class="pill">
                     <img src="images/magnifier-img.png" width="20" alt="Search Icon">
                     <input type="search" placeholder="Search...">
                 </div>
             </div>
-        
+
         </section>
+
+        <section >
+            <div id="notifications" style="display: none;">
+                <h3>Alert</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Action</th>  
+                            <th>Decription</th>
+                            <th>Message</th>
+                            <th>Reason</th>
+                            <th>Task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>    
+                                <img src="images/pencil-img.png" width="30" alt="User Icon">
+                                <img src="images/trash-img.png" width="25" alt="User Icon">
+                            </td>
+                            <td>New Order Notification</td>
+                            <td>New order received for table #5. Please prepare the dishes</td>
+                            <td>Notifying kitchen staff or waiters about incoming orders</td>
+                            <td>Click to view the order details</td>
+                        </tr>
+                        <tr>
+                            <td>    
+                                <img src="images/pencil-img.png" width="30" alt="User Icon">
+                                <img src="images/trash-img.png" width="25" alt="User Icon">
+                            </td>
+                            <td>Reservation Reminder</td>
+                            <td>Table reservation for John Doe at 7:30 PM</td>
+                            <td>Reminding the staff of upcoming reservations</td>
+                            <td>Click to confirm or check reservation details</td>
+                        </tr>
+                        <tr>
+                            <td>    
+                                <img src="images/pencil-img.png" width="30" alt="User Icon">
+                                <img src="images/trash-img.png" width="25" alt="User Icon">
+                            </td>
+                            <td>Low Stock Alert</td>
+                            <td>Warning: We’re running low on ingredient X. Restock soon</td>
+                            <td>Alerting management about stock levels for critical items</td>
+                            <td> Click to view inventory details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="button-add">+Add</button>
+            </div>
+        </section>
+
         <section class="wait-list" >
-            <h2>Wait List</h2>
+            <h3>Wait List</h3>
             <table>
                 <thead>
                     <tr>
@@ -124,10 +183,10 @@
                     </tr>
                 </tbody>
             </table>
-            <button class="button-add">+Add</button>
+            <button id="add-wait-list" type="button"  class="button-add">+Add</button>
         </section>
         <section class="active-tables-and-orders">
-            <h2>Active Tables and Orders</h2>
+            <h3>Active Tables and Orders</h3>
             <table>
                 <thead>
                     <tr>
@@ -209,4 +268,46 @@
     </footer>
     <script src="scripts/eRestaurant.js" defer></script>
 </body>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="waitlist-form">
+            <div class="form-group">
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number:</label>
+                <input type="text" id="phone-number" name="phone-number" required>
+            </div>
+            <div class="form-group">
+                <label for="party-size">Party Size:</label>
+                <input type="number" id="party-size" name="party-size" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="check-in">Check-in:</label>
+                <input type="datetime-local" id="check-in" name="check-in" required>
+            </div>
+            <div class="form-group">
+                <label for="estimate-wait">Estimate Wait Time (minutes):</label>
+                <input type="number" id="estimate-wait" name="estimate-wait" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="table-preference">Table Preference:</label>
+                <select id="table-preference" name="table-preference" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="indoor">Indoor</option>
+                    <option value="outdoor">Outdoor</option>
+                    <option value="window">Window</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
 </html>
