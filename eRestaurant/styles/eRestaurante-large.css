@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Set a default font */
+    line-height: 1.6; /* Improve readability */
+    background-color: white; /* Optional: Set a background color */
+    color: #444444;
+}
+
+header, footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid gainsboro;
+    border-radius: 7px;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+header p {
+    margin: 0 20px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+nav{
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    gap: 20px;    
+}
+
+.menu-container {
+    display: flex; /* Align buttons horizontally */
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 55px; /* Space between buttons */
+    width: 100%;
+}
+
+
+.menu-upload img {
+    margin-right: 5px; /* Add spacing between icon and text */
+}
+
+.icon-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    padding: 15px;
+    
+}
+
+   .icon-list li {
+    margin-left: 25px; 
+    margin-right: 20px;
+} 
+
+/* Buttons styling */
+.menu-upload {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 20%;
+}
+
+.date-time {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.button-add {
+    align-self: flex-end; 
+    padding: 10px 30px; 
+    font-size: 1rem; 
+    border: 1px solid rgb(229, 226, 226); 
+    background-color: white; 
+    margin-top: 5px;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.button-add:hover {
+    background-color: #c8c4c4;
+    color: black; /* Changes text color to white */
+}
+
+section {
+    margin: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;  /* Ensures borders are collapsed into one */
+    margin-top: 20px;
+}
+
+/* Zebra striping for rows */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;  /* Light background for odd rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff;  /* White background for even rows */
+}
+
+/* Style table cells */
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid rgb(229, 226, 226);  /* Light gray border for cells */
+}
+
+/* Header row style */
+th {
+    background-color: #c8c4c4;
+    font-weight: bold;
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #5c5a5a;  /* Highlight row on hover */
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    justify-items: center;
+}
+
+footer p {
+    padding: 0;
+}
+
+.icone {
+    width: 28px;
+    height: 18px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-right: 12px;
+
+}
+
+/* General section styling */
+.dynamic-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    
+    text-align: center;
+}
+
+.date-time h2, #search h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#search {
+    margin-top: 20px;
+}
+
+/* Styling the pill */
+.pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+/* Search input field styling */
+.pill input[type="search"] {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 1rem;
+    margin-left: 10px;
+    border-radius: 50px;
+    background-color: transparent;
+    width: 25rem; /* Adjust width as needed */
+}
+
+/* Icon styling */
+.pill img {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+}
+
+/* Optional: Add some hover effects or transitions */
+.pill:hover {
+    background-color: #e0e0e0;
+}
+
+
