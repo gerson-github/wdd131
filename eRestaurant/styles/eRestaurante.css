@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Set a default font */
+    line-height: 1.6; /* Improve readability */
+    background-color: white; /* Optional: Set a background color */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid gainsboro;
+    border-radius: 7px;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+header p {
+    margin: 0 20px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    
+}
+
+nav{
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    gap: 20px;    
+}
+
+.menu-container {
+    display: flex; /* Align buttons horizontally */
+    align-items: center;
+    margin-left: 10%;
+    gap: 55px; /* Space between buttons */
+}
+
+
+.menu-upload img {
+    margin-right: 5px; /* Add spacing between icon and text */
+}
+
+.icon-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    padding: 15px;
+}
+
+ .icon-list li {
+    margin-left: 25px; 
+    margin-right: 20px;
+} 
+
+/* Buttons styling */
+.menu-upload {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+
+
+section {
+    margin: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;  /* Ensures borders are collapsed into one */
+    margin-top: 20px;
+    
+}
+
+/* Zebra striping for rows */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;  /* Light background for odd rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff;  /* White background for even rows */
+}
+
+/* Style table cells */
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid lightgray;  /* Light gray border for cells */
+}
+
+/* Header row style */
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #f5f5f5;  /* Highlight row on hover */
+}
