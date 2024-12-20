@@ -16,36 +16,39 @@
 <body>
     <header>
         <div class="logo">
-            <img id="product-image" src="https://via.placeholder.com/150" alt="Placeholder Image">
+            <!-- <img id="product-image" src="https://via.placeholder.com/150" alt="Placeholder Image"> -->
+            <img id="product-image" src="images/logo-img.png" alt="Placeholder Image">
         </div>
         <p>Restaurant Back-Office System</p>
         <div class="menu-container">
             <button class="menu-upload">
-                <img src="images/upload-img.png" width="30" alt="User Icon"> Help
-            </button>
-            <button class="menu-upload">
                 <img src="images/help-img.png" width="30" alt="User Icon"> Menu Upload
             </button>
+            <button class="menu-upload">
+                <img src="images/upload-img.png" width="30" alt="User Icon"> Help
+            </button>
         </div>
-
         <nav>
-            
-            
-            <ul class="icon-list">
-                <li><img src="images/user-img.png" width="30" alt=""></li>
-                <li><img src="images/config-img.png" width="30" alt=""></li>
-                <li><img src="images/bell-img.png" width="30" alt=""></li>
-                <li><img src="images/magnifier-img.png" width="30" alt=""></li>
+           <ul class="icon-list">
                 <li><img src="images/speaker-img.png" width="30" alt=""></li>
+                <li><img src="images/magnifier-img.png" width="30" alt=""></li>
+                <li><img src="images/bell-img.png" width="30" alt=""></li>
+                <li><img src="images/config-img.png" width="30" alt=""></li>
+                <li><img src="images/user-img.png" width="30" alt=""></li>
             </ul>
         </nav>
     </header>
     <main>
-        <p>Date/Time:</p>
         <section class="dynamic-content">
+            <div class="date-time">
+                <h2>Date/time: </h2>  <span class="name" id="current-date"></span>
+            </div>
             <div id="search">
-                <h2>Search</h2>
-                <input type="search">
+                
+                <div class="pill">
+                    <img src="images/magnifier-img.png" width="20" alt="Search Icon">
+                    <input type="search" placeholder="Search...">
+                </div>
             </div>
         
         </section>
@@ -69,7 +72,7 @@
                     <tr>
                         <td>    
                             <img src="images/pencil-img.png" width="30" alt="User Icon">
-                            <img src="images/upload-img.png" width="30" alt="User Icon">
+                            <img src="images/trash-img.png" width="25" alt="User Icon">
                         </td>
                         <td>John Carter</td>
                         <td>123 456-5677</td>
@@ -82,7 +85,7 @@
                     <tr>
                         <td>    
                             <img src="images/pencil-img.png" width="30" alt="User Icon">
-                            <img src="images/upload-img.png" width="30" alt="User Icon">
+                            <img src="images/trash-img.png" width="25" alt="User Icon">
                         </td>
                         <td>Larry the Bird</td>
                         <td>123 456-5577</td>
@@ -95,7 +98,7 @@
                     <tr>
                         <td>    
                             <img src="images/pencil-img.png" width="30" alt="User Icon">
-                            <img src="images/upload-img.png" width="30" alt="User Icon">
+                            <img src="images/trash-img.png" width="25" alt="User Icon">
                         </td>
                         <td>Camille Presley</td>
                         <td>123 422-111</td>
@@ -107,7 +110,7 @@
                     </tr>
                 </tbody>
             </table>
-            <button>+Add</button>
+            <button class="button-add">+Add</button>
         </section>
         <section class="active-tables-and-orders">
             <h2>Active Tables and Orders</h2>
@@ -129,7 +132,7 @@
                     <tr>
                         <td>    
                             <img src="images/pencil-img.png" width="30" alt="User Icon">
-                            <img src="images/upload-img.png" width="30" alt="User Icon">
+                            <img src="images/trash-img.png" width="25" alt="User Icon">
                         </td>
                         <td>tbl#01</td>
                         <td>Available</td>
@@ -143,7 +146,7 @@
                     <tr>
                         <td>    
                             <img src="images/pencil-img.png" width="30" alt="User Icon">
-                            <img src="images/upload-img.png" width="30" alt="User Icon">
+                            <img src="images/trash-img.png" width="25" alt="User Icon">
                         </td>
                         <td>tbl#01</td>
                         <td>Available</td>
@@ -156,7 +159,7 @@
                     <tr>
                         <td>    
                             <img src="images/pencil-img.png" width="30" alt="User Icon">
-                            <img src="images/upload-img.png" width="30" alt="User Icon">
+                            <img src="images/trash-img.png" width="25" alt="User Icon">
                         </td>
                         <td>tbl#01</td>
                         <td>Available</td>
@@ -170,7 +173,7 @@
                    <tr>
                         <td>    
                             <img src="images/pencil-img.png" width="30" alt="User Icon">
-                            <img src="images/upload-img.png" width="30" alt="User Icon">
+                            <img src="images/trash-img.png" width="25" alt="User Icon">
                         </td>
                         <td>tbl#01</td>
                         <td>Available</td>
@@ -183,7 +186,7 @@
                     </tr>
                 </tbody>
             </table>
-            <button>+Add</button>
+            <button class="button-add">+Add</button>
         </section>
     </main>
     <footer>
