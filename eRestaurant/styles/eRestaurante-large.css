@@ -16,7 +16,7 @@ body {
 header, footer {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     margin: 15px;
     border: 2px solid gainsboro;
     border-radius: 7px;
@@ -84,6 +84,54 @@ nav{
     font-size: 1rem;
     width: 20%;
 }
+
+
+
+/* Style for the hamburger menu button */
+.hamburger-menu {
+    position: relative; /* To position the options relative to the button */
+    display: inline-block;
+    display: none;
+}
+
+/* Hide the hamburger options by default */
+.hamburger-options {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position options below the hamburger menu */
+    top: 90%; /* Position directly below the menu */
+    left: -380%;
+    background-color: white;
+    border: 1px solid #ccc; 
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    width: 500%; /* Make it the same width as the hamburger button */
+    height: 15rem;
+}
+
+.hamburger-options ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger-options ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Optional: Hover effect for items */
+.hamburger-options ul li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show the hamburger options when 'active' class is added */
+.hamburger-options.active {
+    display: block;
+}
+
+
+
+
 
 .date-time {
     display: flex;
