@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seafood Meals List</title>
+    
+    <style>
+        /* Make table container scrollable on smaller screens */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        /* Responsive Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        /* Make table more readable on smaller screens */
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+
+            /* Stack table rows for very small screens */
+            thead {
+                display: none;
+            }
+
+            tbody tr {
+                display: block;
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+                padding: 10px;
+                background: #fff;
+            }
+
+            tbody td {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px;
+            }
+
+            tbody td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                text-transform: uppercase;
+                flex: 1;
+                padding-right: 10px;
+            }
+        }
+    </style>
+       
+</head>
+
+<body>
+    
+    <div>aqui</div>
+    
+    <section style="border: 5px solid yellow;">
+        <div id="notifications" style="display: block;">
+            <h3>Alert</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Description</th>
+                            <th>Message</th>
+                            <th>Reason</th>
+                            <th>Task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Action">
+                                <img src="images/pencil-img.png" width="30" alt="Edit">
+                                <img src="images/trash-img.png" width="25" alt="Delete">
+                            </td>
+                            <td data-label="Description">New Order Notification</td>
+                            <td data-label="Message">New order received for table #5. Please prepare the dishes</td>
+                            <td data-label="Reason">Notifying kitchen staff or waiters about incoming orders</td>
+                            <td data-label="Task">Click to view the order details</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Action">
+                                <img src="images/pencil-img.png" width="30" alt="Edit">
+                                <img src="images/trash-img.png" width="25" alt="Delete">
+                            </td>
+                            <td data-label="Description">Reservation Reminder</td>
+                            <td data-label="Message">Table reservation for John Doe at 7:30 PM</td>
+                            <td data-label="Reason">Reminding the staff of upcoming reservations</td>
+                            <td data-label="Task">Click to confirm or check reservation details</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Action">
+                                <img src="images/pencil-img.png" width="30" alt="Edit">
+                                <img src="images/trash-img.png" width="25" alt="Delete">
+                            </td>
+                            <td data-label="Description">Low Stock Alert</td>
+                            <td data-label="Message">Warning: We’re running low on ingredient X. Restock soon</td>
+                            <td data-label="Reason">Alerting management about stock levels for critical items</td>
+                            <td data-label="Task">Click to view inventory details</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="button-add">+Add</button>
+        </div>
+    </section>
+
+</body>
+
+</html>
